@@ -9,13 +9,13 @@
   <h1>the feels</h1>
 </div>
 
-<div id="menu">
-  <%= link_to '6-word', sixword_poem_path  %> |
-  <%= link_to 'Haiku', haiku_poem_path  %> |
-  <%= link_to 'Free Verse', freeverse_poem_path %>
-</div>
-
 <% @poems.each do |poem| %>
+  <div id="menu">
+    <%= link_to '6-word', sixword_poem_path  %> |
+    <%= link_to 'Haiku', haiku_poem_path  %> |
+    <%= link_to 'Free Verse', freeverse_poem_path %>
+  </div>
+
   <div id="poem_title">
     <%= poem.title %>
   </div>
