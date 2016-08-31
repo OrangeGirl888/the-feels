@@ -14,24 +14,28 @@
   <%= link_to 'Free Verse', poems_freeverse_path(@freeverse) %>
 </div>
 
-<div id="poem_title">
-  <%= @poem.title %>
+<% @haikus.each do |poem| %>
+  <div id="poem_title">
+    <%= poem.title %>
+  </div>
+
+  <div id="poem_content">
+    <%= poem.content %>
+  </div>
+
+  <div id="date">
+    posted on <%= poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
+  </div>
+
+  <div id="links">
+    <%= link_to 'Edit', edit_poem_path(poem) %> |
+    <%= link_to 'Delete', poem, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+
+<div id="new_button">
+  <%= link_to 'New Poem', new_poem_path %>
 </div>
 
-<div id="poem_content">
-  <%= @poem.content %>
-</div>
-
-<div id="author">
-  - <%= @poem.author %>
-</div>
-
-<div id="date">
-  posted on <%= @poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
-</div>
-
-<div id="links">
-<%= link_to 'Edit', edit_poem_path(@poem) %> |
-<%= link_to 'Back', poems_path %>
 </div>
 </center>
