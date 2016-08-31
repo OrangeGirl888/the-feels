@@ -1,1 +1,29 @@
-hi
+<center>
+<div id="notice">
+  <%= notice %>
+</div>
+
+<div style="width=50%">
+
+<div id="the_feels">
+  <h1>the feels</h1>
+</div>
+
+<div id="menu">
+  <%= link_to '6-word', sixword_poem_path  %> |
+  <%= link_to 'Haiku', haiku_poem_path  %>
+</div>
+
+<% @poems.each do |poem| %>
+  <div id="links">
+    <%= link_to 'Edit', edit_poem_path(poem) %> |
+    <%= link_to 'Delete', poem, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+
+<div id="new_button">
+  <%= link_to 'New Poem', new_poem_path %>
+</div>
+
+</div>
+</center>
