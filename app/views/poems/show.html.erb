@@ -1,7 +1,7 @@
+<center>
 <p id="notice"><%= notice %></p>
 
 <div id="poem_title">
-  <strong>Title:</strong>
   <%= @poem.title %>
 </div>
 
@@ -14,10 +14,11 @@
 </div>
 
 <div id="date">
-  posted on <%= poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
+  posted on <%= @poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
 </div>
 
 <div id="links">
 <%= link_to 'Edit', edit_poem_path(@poem) %> |
 <%= link_to 'Back', poems_path %>
 </div>
+</center>

@@ -24,7 +24,9 @@
   </div>
 
   <div class="field">
-    <%= f.text_field :type %>
+    <%= f.radio_button :type, :value => "sixword" %>6-word
+    <%= f.radio_button :type, :value => "haiku" %>Haiku
+    <%= f.radio_button :type, :value => "freeverse" %>Free Verse
   </div>
 
   <div class="actions">
