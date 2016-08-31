@@ -1,24 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div id="poem_title">
   <strong>Title:</strong>
   <%= @poem.title %>
-</p>
+</div>
 
-<p>
-  <strong>Content:</strong>
+<div id="poem_content">
   <%= @poem.content %>
-</p>
+</div>
 
-<p>
-  <strong>Author:</strong>
-  <%= @poem.author %>
-</p>
+<div id="author">
+  - <%= @poem.author %>
+</div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @poem.type %>
-</p>
+<div id="date">
+  posted on <%= poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
+</div>
 
+<div id="links">
 <%= link_to 'Edit', edit_poem_path(@poem) %> |
 <%= link_to 'Back', poems_path %>
+</div>
