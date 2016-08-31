@@ -1,7 +1,7 @@
 body {
-  background-color: #fff;
+  background-color: #faebd7;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: verdana, arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -18,16 +18,13 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
+a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: grey;
   }
 }
 
@@ -38,7 +35,9 @@ div {
 }
 
 #notice {
-  color: green;
+  color: red;
+  font-weight: bold;
+  margin: 15px;
 }
 
 .field_with_errors {
