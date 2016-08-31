@@ -10,22 +10,22 @@
 </div>
 
 <% @poems.each do |poem| %>
-<div id="poem_title">
-  <%= poem.title %>
-</div>
+  <div id="poem_title">
+    <%= poem.title %>
+  </div>
 
-<div id="poem_content">
-  <%= poem.content %>
-</div>
+  <div id="poem_content">
+    <%= poem.content %>
+  </div>
 
-<div id="date">
-  posted on <%= poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
-</div>
+  <div id="date">
+    posted on <%= poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
+  </div>
 
-<div id="links">
-  <%= link_to 'Edit', edit_poem_path(poem) %> |
-  <%= link_to 'Delete', poem, method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>
+  <div id="links">
+    <%= link_to 'Edit', edit_poem_path(poem) %> |
+    <%= link_to 'Delete', poem, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
 <% end %>
 
 <div id="new_button">
