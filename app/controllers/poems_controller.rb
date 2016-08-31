@@ -23,17 +23,17 @@ class PoemsController < ApplicationController
 
   # GET /poems/sixword
   def sixword
-     @poems = Poem.find(params[:category, :value => "sixword"])
+     @sixword = Poem.find(params[:category, :value => "sixword"])
   end
 
 # GET /poems/haiku
   def haiku
-     @poems = Poem.find(params[:category, :value => "haiku"])
+     @haiku = Poem.find(params[:category, :value => "haiku"])
   end
 
   # GET /poems/freeverse
   def freeverse
-     @poems = Poem.find(params[:category, :value => "freeverse"])
+     @freeverse = Poem.find(params[:category, :value => "freeverse"])
   end
 
   # POST /poems

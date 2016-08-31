@@ -10,10 +10,9 @@
 </div>
 
 <div id="menu">
-  <%= link_to 'Haiku', poems_haiku_path %> |
-  <%= link_to 'Free Verse', poems_freeverse_path %>
+  <%= link_to 'Haiku', poems_haiku_path(@haiku) %> |
+  <%= link_to 'Free Verse', poems_freeverse_path(@freeverse) %>
 </div>
-
 
 <div id="poem_title">
   <%= @poem.title %>
