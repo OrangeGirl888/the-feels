@@ -10,20 +10,28 @@
 </div>
 
 <div id="menu">
-  <%= link_to '6-word', sixword_poem_path  %> |
-  <%= link_to 'Haiku', haiku_poem_path  %>
+  <%= link_to '6-word', sixword_poem_path(@poem) %> |
+  <%= link_to 'Haiku', haiku_poem_path(@poem) %>
 </div>
 
-<% @poems.each do |poem| %>
-  <div id="links">
-    <%= link_to 'Edit', edit_poem_path(poem) %> |
-    <%= link_to 'Delete', poem, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
-<% end %>
-
-<div id="new_button">
-  <%= link_to 'New Poem', new_poem_path %>
+<div id="poem_title">
+  <%= @poem.title %>
 </div>
 
+<div id="poem_content">
+  <%= @poem.content %>
+</div>
+
+<div id="author">
+  - <%= @poem.author %>
+</div>
+
+<div id="date">
+  posted on <%= @poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
+</div>
+
+<div id="links">
+<%= link_to 'Edit', edit_poem_path(@poem) %> |
+<%= link_to 'Back', poems_path %>
 </div>
 </center>

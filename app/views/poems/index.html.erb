@@ -11,9 +11,9 @@
 
 <% @poems.each do |poem| %>
   <div id="menu">
-    <%= link_to '6-word', sixword_poem_path, @poem %> |
-    <%= link_to 'Haiku', haiku_poem_path, @poem %> |
-    <%= link_to 'Free Verse', freeverse_poem_path, @poem %>
+    <%= link_to '6-word', sixword_poem_path(@poem) %> |
+    <%= link_to 'Haiku', haiku_poem_path(@poem) %> |
+    <%= link_to 'Free Verse', freeverse_poem_path(@poem) %>
   </div>
 
   <div id="poem_title">
