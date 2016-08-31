@@ -26,7 +26,7 @@ class PoemsController < ApplicationController
      @poems = Poem.find(params[:category, :value => "sixword"])
   end
 
-# GET /poems/freeverse
+# GET /poems/haiku
   def haiku
      @poems = Poem.find(params[:category, :value => "haiku"])
   end

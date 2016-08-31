@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :poems
 
   get  'poems/freeverse'
+  get  'poems/haiku'
   get  'poems/sixword'
 
   root 'poems#index'
