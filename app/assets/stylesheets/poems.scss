@@ -71,10 +71,15 @@
 }
 
 #catselect {
+  height: 5px;
   width: 15px;
-  background-color: #b0c4de;
-  color: black;
-  margin: 10px;
+  box-sizing: border-box;
+  border: 2px solid #b0c4de;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  font-size: 13px;
+  font-family: verdana, arial, sans-serif;
 }
 
 #new_button {
