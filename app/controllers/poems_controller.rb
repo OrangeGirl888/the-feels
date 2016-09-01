@@ -21,21 +21,6 @@ class PoemsController < ApplicationController
   def edit
   end
 
-  # GET /poems/sixword
-  def sixword
-     @sixwords = Poem.where(category: "sixword")
-  end
-
-# GET /poems/haiku
-  def haiku
-     @haikus = Poem.where(category: "haiku")
-  end
-
-  # GET /poems/freeverse
-  def freeverse
-     @freeverses = Poem.where(category: "freeverse")
-  end
-
   # POST /poems
   # POST /poems.json
   def create
@@ -80,9 +65,6 @@ class PoemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_poem
       @poem = Poem.find(params[:id])
-      @sixword = Poem.find(params[category: "sixword"])
-      @haiku = Poem.find(params[category: "haiku"])
-      @freeverse = Poem.find(params[category: "freeverse"])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
