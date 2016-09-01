@@ -24,6 +24,10 @@
     <%= poem.content %>
   </div>
 
+  <div id="author">
+  - <%= @poem.author %>
+  </div>
+
   <div id="date">
     posted on <%= poem.created_at.strftime('%B %e, %Y %I:%M %p') %>
   </div>
