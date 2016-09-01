@@ -80,6 +80,9 @@ class PoemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_poem
       @poem = Poem.find(params[:id])
+      @sixword = Poem.find(params[category: "sixword"])
+      @haiku = Poem.find(params[category: "haiku"])
+      @freeverse = Poem.find(params[category: "freeverse"])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
