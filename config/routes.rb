@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   resources :poems
 
-  get  'poems/:id/freeverse'
-  get  'poems/:id/haiku'
-  get  'poems/:id/sixword'
+  get  'poems/freeverse'
+  get  'poems/haiku'
+  get  'poems/sixword'
 
   root 'poems#index'
   # The priority is based upon order of creation: first created -> highest priority.
