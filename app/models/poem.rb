@@ -1,5 +1,6 @@
 class Poem < ActiveRecord::Base
-  belongs_to :category
+  has_many :categories_poems
+  has_many :categories, through: :categories_poems
 end
 
 

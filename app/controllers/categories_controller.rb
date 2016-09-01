@@ -1,8 +1,7 @@
 class CategoriesController < ActionController::Base
 
   def sixword
-    @category = Category.find(params[:category, :value = ]
-    @poems = @category.poems
+    @sixwords = Poem.where(category: '6-word')
   end
 
 end
