@@ -24,9 +24,7 @@
   </div>
 
   <div class="field">
-    <%= f.radio_button :category, :value => "sixword" %>6-word
-    <%= f.radio_button :category, :value => "haiku" %>Haiku
-    <%= f.radio_button :category, :value => "freeverse" %>Free Verse
+    <%= f.select :category, [ '6-word', 'Haiku', 'Free Verse'], :prompt => 'Select One' %>
   </div>
 
   <div class="actions">

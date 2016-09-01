@@ -1,7 +1,7 @@
 class CategoriesController < ActionController::Base
 
-  def poems
-    @category = Category.find(params[:category]
+  def sixword
+    @category = Category.find(params[:category, :value = ]
     @poems = @category.poems
   end
 
